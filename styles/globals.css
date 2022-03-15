@@ -118,13 +118,16 @@ p {
 }
 
 @media screen and (max-width: 768px) {
-  h1 {
+
+  h1,
+  h2 {
     margin-bottom: 3rem;
     font-size: 7rem;
   }
 
   h2 {
     /* font-size: calc(var(--body-font-size) - .2rem); */
+    /* font-size: 7rem; */
   }
 
   h3 {
@@ -132,7 +135,7 @@ p {
   }
 
   p {
-    font-size: calc(var(--body-font-size) - .2rem);
+    /* font-size: calc(var(--body-font-size) - .2rem); */
   }
 }
 

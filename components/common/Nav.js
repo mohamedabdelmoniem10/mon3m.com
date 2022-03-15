@@ -88,8 +88,8 @@ function loadSiteMode() {
   let storedTheme =
     localStorage.getItem("theme") ||
     (window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light");
+      ? "light"
+      : "dark");
   if (storedTheme) setDataTheme(storedTheme);
   siteModeToggle.addEventListener("click", modeToggler);
 }
