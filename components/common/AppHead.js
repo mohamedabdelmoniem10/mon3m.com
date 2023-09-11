@@ -44,7 +44,7 @@ const AppHead = ({ title, desc, ogTitle, ogDesc }) => {
       <link rel="manifest" href="/favicon/site.webmanifest" />
       {/* <!-- fonts --> */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link
         href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Roboto:wght@400;500&display=swap"
         rel="stylesheet"
