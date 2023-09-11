@@ -7,7 +7,7 @@ const AppHead = ({ title, desc, ogTitle, ogDesc }) => {
   const ogDescContent = ogDesc
     ? ogDesc
     : "I'm Mohamed Abdelmoniem, a Front-End Developer with 2+ years of experience implementing complex web apps and frameworks, specializing in Javascript, Reactjs, React Native, Nextjs, Angular, and WordPress. and I'm passionate to learn new technologies.";
-  const ogTitleContent = ogTitle ? ogTitle : `Mohamed Mon3m`;
+  const ogTitleContent = ogTitle ? ogTitle : title;
   return (
     <Head>
       <title>{title}</title>

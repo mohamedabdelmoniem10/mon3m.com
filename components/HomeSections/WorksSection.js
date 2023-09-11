@@ -2,13 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 const WorksSection = ({ works }) => {
+  console.log('this is works:>', works)
   return (
     <section className="works block">
       <div className="container--large">
         <div className="grid grid--1x4 works__grid">
           {works.map((work) => {
-            const workImg = work._embedded["wp:featuredmedia"]["0"].source_url;
-            const workImgAlt = work._embedded["wp:featuredmedia"]["0"].alt_text;
+            const workImg = work.image;
+            const workImgAlt = work.title;
             return (
               <Link key={work.id} href={`/works/${work.id}`}>
                 <a href="" className="work">

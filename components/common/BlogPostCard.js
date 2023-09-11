@@ -2,8 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const BlogPostCard = ({ post }) => {
-  const postImg = post._embedded["wp:featuredmedia"]["0"].source_url;
-  const postImgAlt = post._embedded["wp:featuredmedia"]["0"].alt_text;
+  const postImg = post.image;
   const postDate = new Date(post.date).toDateString().slice(4);
   return (
     <Link href={`/blog/${post.id}`}>
@@ -18,14 +17,14 @@ const BlogPostCard = ({ post }) => {
               objectFit="cover"
               unoptimized
               layout="fill"
-              alt={postImgAlt}
+              alt={post.title}
             />
           </div>
         </div>
-        <h4 className="post__title">{post.title.rendered}</h4>
+        <h4 className="post__title">{post.title}</h4>
         <div
           className="post__excerpt"
-          dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
+          dangerouslySetInnerHTML={{ __html: post.excerpt }}
         />
         <p className="post__date">{postDate}</p>
       </a>

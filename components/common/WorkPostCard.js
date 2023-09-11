@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const WorkPostCard = ({ post }) => {
-  const postImg = post._embedded["wp:featuredmedia"]["0"].source_url;
+  const postImg = post.image;
   const postDate = new Date(post.date).toDateString().slice(4);
   return (
     <Link href={`/works/${post.id}`}>
@@ -17,14 +17,14 @@ const WorkPostCard = ({ post }) => {
               objectFit="cover"
               unoptimized
               layout="fill"
-              alt="build your billion dollar idea"
+              alt={post.title}
             />
           </div>
         </div>
-        <h4 className="post__title">{post.title.rendered}</h4>
+        <h4 className="post__title">{post.title}</h4>
         <div
           className="post__excerpt"
-          dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
+          dangerouslySetInnerHTML={{ __html: post.excerpt }}
         />
         <p className="post__date">{postDate}</p>
       </a>
@@ -33,3 +33,5 @@ const WorkPostCard = ({ post }) => {
 };
 
 export default WorkPostCard;
+
+
