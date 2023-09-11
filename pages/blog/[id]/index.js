@@ -91,10 +91,10 @@ const blog = ({ post }) => {
     <div className="post__container">
       <div className="container">
         <PageHeader
-          title={post.title.rendered}
-          desc={post.excerpt.rendered}
-          ogTitle={post.title.rendered}
-          ogDesc={post.excerpt.rendered}
+          title={post.title}
+          desc={post.excerpt}
+          ogTitle={post.title}
+          ogDesc={post.excerpt}
         />
         <p>{postDate}</p>
         <div className="post__img" style={{ height: 500 }}>
@@ -111,7 +111,7 @@ const blog = ({ post }) => {
         </div>
         <div
           className="post__desc"
-          dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+          dangerouslySetInnerHTML={{ __html: post.description }}
         />
       </div>
     </div>
