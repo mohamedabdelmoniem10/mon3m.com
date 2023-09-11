@@ -16,10 +16,10 @@ const ContactSection = () => {
               {/* <!-- mail --> */}
               <p>
                 <a
-                  href="mailto:dev@mon3m.com"
+                  href="mailto:mohamedmon3m10@gmail.com"
                   className="link link--under-line"
                 >
-                  dev@mon3m.com
+                  mohamedmon3m10@gmail.com
                 </a>
               </p>
               {/* <!-- phone number --> */}

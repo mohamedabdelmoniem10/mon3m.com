@@ -5,7 +5,7 @@ export default function handler(req, res) {
     port: 465,
     secure: true, // use TLS
     auth: {
-      user: "dev@mon3m.com",
+      user: "mohamedmon3m10@gmail.com",
       pass: "MOn3m@dev",
     },
     debug: true,
@@ -13,8 +13,8 @@ export default function handler(req, res) {
   });
 
   const mailData = {
-    from: "MO. <dev@mon3m.com>",
-    to: "dev@mon3m.com",
+    from: "MO. <mohamedmon3m10@gmail.com>",
+    to: "mohamedmon3m10@gmail.com",
     subject: `contact form From: ${req.body.name} `,
     text: `Email: ${req.body.email},
           Message: ${req.body.message}`,

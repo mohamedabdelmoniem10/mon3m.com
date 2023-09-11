@@ -36,8 +36,8 @@ const Footer = () => {
           </div>
 
           <div className="footer__contact">
-            <a href="mailto:dev@mon3m.com" className="link">
-              dev@mon3m.com
+            <a href="mailto:mohamedmon3m10@gmail.com" className="link">
+              mohamedmon3m10@gmail.com
             </a>
             <a href="tel:+201111798451" className="link">
               +20 111 179 8451
