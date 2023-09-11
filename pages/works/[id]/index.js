@@ -2,17 +2,17 @@ import Image from "next/image";
 import PageHeader from "../../../components/common/PageHeader";
 
 const work = ({ post }) => {
-  const postImg = post._embedded["wp:featuredmedia"]["0"].source_url;
-  const postImgAlt = post._embedded["wp:featuredmedia"]["0"].alt_text;
-  const postDate = new Date(post.date).toDateString().slice(4);
+  const postImg = post.image;
+  const postImgAlt = post.title;
+  const postDate = post.date;
   return (
     <div className="post__container">
       <div className="container">
         <PageHeader
-          title={post.title.rendered}
-          desc={post.excerpt.rendered}
-          ogTitle={post.title.rendered}
-          ogDesc={post.excerpt.rendered}
+          title={post.title}
+          desc={post.excerpt}
+          ogTitle={post.title}
+          ogDesc={post.excerpt}
         />
         <p>{postDate}</p>
         <div className="post__img" style={{ height: 500 }}>
@@ -29,7 +29,7 @@ const work = ({ post }) => {
         </div>
         <div
           className="post__desc"
-          dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+          dangerouslySetInnerHTML={{ __html: post.description }}
         />
       </div>
     </div>

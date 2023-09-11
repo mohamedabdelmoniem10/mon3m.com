@@ -2,9 +2,9 @@ import Image from "next/image";
 import PageHeader from "../../../components/common/PageHeader";
 
 const blog = ({ post }) => {
-  const postImg = post._embedded["wp:featuredmedia"]["0"].source_url;
-  const postImgAlt = post._embedded["wp:featuredmedia"]["0"].alt_text;
-  const postDate = new Date(post.date).toDateString().slice(4);
+  const postImg = post.image;
+  const postImgAlt = post.title;
+  const postDate = post.date;
   return (
     <div className="post__container">
       <div className="container">
