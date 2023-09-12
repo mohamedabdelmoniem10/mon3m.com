@@ -82,26 +82,26 @@ const AboutSection = () => {
 
             <div className="skill">
               <div className="skill__info">
-                <p className="skill__name">Angular 11, React</p>
-                <p className="skill__percentage">90%</p>
+                <p className="skill__name">React, Vue, Angular, Nextjs</p>
+                <p className="skill__percentage">95%</p>
               </div>
               <div className="skill__prog-bar">
                 <div
                   className="skill__prog-bar--complete"
-                  style={{ width: "90%" }}
+                  style={{ width: "95%" }}
                 ></div>
               </div>
             </div>
 
             <div className="skill">
               <div className="skill__info">
-                <p className="skill__name">Reactnative</p>
-                <p className="skill__percentage">75%</p>
+                <p className="skill__name">ReactNative</p>
+                <p className="skill__percentage">80%</p>
               </div>
               <div className="skill__prog-bar">
                 <div
                   className="skill__prog-bar--complete"
-                  style={{ width: "75%" }}
+                  style={{ width: "80%" }}
                 ></div>
               </div>
             </div>
