@@ -18,12 +18,12 @@ const AppHead = ({ title, desc, ogTitle, ogDesc }) => {
       />
       <meta property="og:title" content={ogTitleContent} />
       <meta property="og:description" content={ogDescContent} />
-      <meta property="og:image" content="/images/mon3m.jpg" />
+      <meta property="og:image" content="/images/mon3m.png" />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta property="twitter:title" content={ogTitleContent} />
       <meta property="twitter:description" content={ogDescContent} />
-      <meta property="twitter:image" content="/images/mon3m.jpg" />
+      <meta property="twitter:image" content="/images/mon3m.png" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"

@@ -28,9 +28,9 @@ const AboutSection = () => {
           <div className="about__me">
             <div className="img">
               <Image
-                src="/images/mon3m.jpg"
+                src="/images/mon3m.png"
                 placeholder="blur"
-                blurDataURL="/images/mon3m.jpg"
+                blurDataURL="/images/mon3m.png"
                 objectFit="cover"
                 layout="fill"
                 unoptimized
