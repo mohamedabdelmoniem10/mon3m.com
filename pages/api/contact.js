@@ -1,20 +1,20 @@
 export default function handler(req, res) {
   let nodemailer = require("nodemailer");
   const transporter = nodemailer.createTransport({
-    host: "mon3m.com",
-    port: 465,
+    host: process.env.SMTP_HOST,
+    port: process.env.SMTP_PORT,
     secure: true, // use TLS
     auth: {
-      user: "mohamedmon3m10@gmail.com",
-      pass: "MOn3m@dev",
+      user: process.env.SMTP_USERNAME,
+      pass: process.env.SMTP_PASSWORD,
     },
     debug: true,
     logger: true,
   });
 
   const mailData = {
-    from: "MO. <mohamedmon3m10@gmail.com>",
-    to: "mohamedmon3m10@gmail.com",
+    from: "MO. <mohamedabdelmoniem10@gmail.com>",
+    to: "mohamedabdelmoniem10@gmail.com",
     subject: `contact form From: ${req.body.name} `,
     text: `Email: ${req.body.email},
           Message: ${req.body.message}`,

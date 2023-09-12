@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="container--large">
         <p className="footer__copy-rights">
-          &copy; 2022 MOn3m, Created using Nextjs.
+          &copy; 2023 MOn3m, Built with 🫶 on Earth 🌍.
         </p>
 
         <div className="footer__social">
@@ -36,8 +36,8 @@ const Footer = () => {
           </div>
 
           <div className="footer__contact">
-            <a href="mailto:mohamedmon3m10@gmail.com" className="link">
-              mohamedmon3m10@gmail.com
+            <a href="mailto:mohamedabdelmoniem10@gmail.com" className="link">
+              mohamedabdelmoniem10@gmail.com
             </a>
             <a href="tel:+201111798451" className="link">
               +20 111 179 8451
