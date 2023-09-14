@@ -137,11 +137,6 @@ p {
   p {
     /* font-size: calc(var(--body-font-size) - .2rem); */
   }
-  .name-heading {
-    margin-left: 0rem !important;
-    margin-top: -12rem!important;
-    margin-bottom: 7rem;
-  }
 }
 
 /* Icons */
@@ -639,16 +634,6 @@ textarea::placeholder {
 .hello h2 {
   margin-top: 0;
   color: #404040;
-}
-
-.name-heading {
-  font-family: 'Noto Nastaliq Urdu', serif !important;
-  direction: rtl;
-  margin: auto;
-  margin-top: -5rem !important;
-  margin-left: 10%;
-  line-height: 2;
-  font-size: 10rem;
 }
 
 .hello p {

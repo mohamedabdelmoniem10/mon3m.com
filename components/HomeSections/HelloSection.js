@@ -3,7 +3,7 @@ const HelloSection = () => {
     <section className="hello block">
       <div className="container">
         <div className="grid grid--1x2">
-          <h2 className="name-heading">محمد{<br />}عبدالمُنعم</h2>
+          <h2>hello everyone</h2>
           <p>
             I'm Mohamed Abdelmoniem, and I'm passionate about learning new
             things. 
