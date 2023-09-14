@@ -3,10 +3,10 @@ import Head from "next/head";
 const AppHead = ({ title, desc, ogTitle, ogDesc }) => {
   const description = desc
     ? desc
-    : "Experienced frontend developer with 3+ years of expertise in crafting user-friendly, responsive websites and web apps. Proficient in HTML, CSS, JavaScript, and popular frontend frameworks like React, Angular, and Vue. Collaborative team player, translating project requirements into visually appealing web pages. Meticulous and passionate about creating elegant, efficient user interfaces. Stay ahead with the latest web tech trends, committed to continuous improvement.";
+    : "Experienced frontend developer with 3+ years crafting user-friendly websites, proficient in HTML, CSS, JavaScript, React, Angular, and Vue. Meticulous, trend-conscious, and committed to excellence.";
   const ogDescContent = ogDesc
     ? ogDesc
-    : "Experienced frontend developer with 3+ years of expertise in crafting user-friendly, responsive websites and web apps. Proficient in HTML, CSS, JavaScript, and popular frontend frameworks like React, Angular, and Vue. Collaborative team player, translating project requirements into visually appealing web pages. Meticulous and passionate about creating elegant, efficient user interfaces. Stay ahead with the latest web tech trends, committed to continuous improvement.";
+    : "Experienced frontend developer with 3+ years crafting user-friendly websites, proficient in HTML, CSS, JavaScript, React, Angular, and Vue. Meticulous, trend-conscious, and committed to excellence.";
   const ogTitleContent = ogTitle ? ogTitle : title;
   return (
     <Head>
