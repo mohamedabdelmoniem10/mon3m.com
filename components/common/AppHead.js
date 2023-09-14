@@ -3,10 +3,10 @@ import Head from "next/head";
 const AppHead = ({ title, desc, ogTitle, ogDesc }) => {
   const description = desc
     ? desc
-    : "My name is Mohamed Mon3m - I can build whatever you need Website, MobileApp or even DesktopApp, using modern technologies like Angular, React, Nextjs, React Native, Nodejs and Wordpress";
+    : "Experienced frontend developer with 3+ years of expertise in crafting user-friendly, responsive websites and web apps. Proficient in HTML, CSS, JavaScript, and popular frontend frameworks like React, Angular, and Vue. Collaborative team player, translating project requirements into visually appealing web pages. Meticulous and passionate about creating elegant, efficient user interfaces. Stay ahead with the latest web tech trends, committed to continuous improvement.";
   const ogDescContent = ogDesc
     ? ogDesc
-    : "I'm Mohamed Abdelmoniem, a Front-End Developer with 2+ years of experience implementing complex web apps and frameworks, specializing in Javascript, Reactjs, React Native, Nextjs, Angular, and WordPress. and I'm passionate to learn new technologies.";
+    : "Experienced frontend developer with 3+ years of expertise in crafting user-friendly, responsive websites and web apps. Proficient in HTML, CSS, JavaScript, and popular frontend frameworks like React, Angular, and Vue. Collaborative team player, translating project requirements into visually appealing web pages. Meticulous and passionate about creating elegant, efficient user interfaces. Stay ahead with the latest web tech trends, committed to continuous improvement.";
   const ogTitleContent = ogTitle ? ogTitle : title;
   return (
     <Head>
@@ -14,7 +14,7 @@ const AppHead = ({ title, desc, ogTitle, ogDesc }) => {
       <meta name="description" content={description} />
       <meta
         name="keywords"
-        content="Software Development, developer, freelancer, frontend, JavaScript, Nodejs, Fastify, Express, Web Development, HTML, HTML5, CSS, CSS3, bootstrap, Angular, React, React Native, WordPress, Full Stack,"
+        content="Software Development, developer, freelancer, frontend, JavaScript, Nodejs, Fastify, Express, Web Development, HTML, HTML5, CSS, CSS3, bootstrap, Angular, React, React Native, WordPress, Full Stack, developer"
       />
       <meta property="og:title" content={ogTitleContent} />
       <meta property="og:description" content={ogDescContent} />
@@ -49,6 +49,10 @@ const AppHead = ({ title, desc, ogTitle, ogDesc }) => {
         href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Roboto:wght@400;500&display=swap"
         rel="stylesheet"
       />
+
+      <link rel="preconnect" href="https://fonts.googleapis.com"/>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@700&display=swap" rel="stylesheet" />
     </Head>
   );
 };

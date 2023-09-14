@@ -13,11 +13,15 @@ export default function handler(req, res) {
   });
 
   const mailData = {
-    from: "MO. <mohamedabdelmoniem10@gmail.com>",
+    from: `MO. <${req.body.email}>`,
     to: "mohamedabdelmoniem10@gmail.com",
-    subject: `contact form From: ${req.body.name} `,
-    text: `Email: ${req.body.email},
-          Message: ${req.body.message}`,
+    subject: `Contact form From Mon3m.com`,
+    // text: `Email: ${req.body.email}Message: ${req.body.message}`,
+    html: `
+      <h3>Name:</h3><b>${req.body.name}</b>
+      <br />
+      <h3>Message:</h3><b>${req.body.message}</b>
+    `
   };
   transporter.sendMail(mailData, (errors, info) => {
     if (errors) {
