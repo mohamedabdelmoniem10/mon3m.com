@@ -14,7 +14,7 @@ const AppHead = ({ title, desc, ogTitle, ogDesc }) => {
       <meta name="description" content={description} />
       <meta
         name="keywords"
-        content="Software Development, developer, freelancer, frontend, JavaScript, Nodejs, Fastify, Express, Web Development, HTML, HTML5, CSS, CSS3, bootstrap, Angular, React, React Native, WordPress, Full Stack, developer"
+        content="Frontend Development, Web Development, HTML, CSS, JavaScript, React, Angular, Vue.js, User Interface (UI) Design, Responsive Web Design, Web Application Development, Cross-Functional Collaboration, User Experience (UX), Web Design Trends, Web Technology, Code Optimization, Web Developer Portfolio, Client Collaboration, Frontend Frameworks, Continuous Learning, Web Design, Frontend Coding, Mobile Optimization, Cross-Browser Compatibility, UI/UX Design, Single Page Applications (SPA), CSS Preprocessors (e.g., SASS, LESS), Responsive Design Principles, Frontend Performance, Web Accessibility, Frontend Best Practices, JavaScript Libraries (e.g., jQuery), Code Debugging, Version Control (e.g., Git), Web Development Tools, Creative Web Solutions, Prototyping, SEO-Friendly Web Design, Progressive Web Apps (PWAs), Frontend Security Practices"
       />
       <meta property="og:title" content={ogTitleContent} />
       <meta property="og:description" content={ogDescContent} />
@@ -49,10 +49,6 @@ const AppHead = ({ title, desc, ogTitle, ogDesc }) => {
         href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Roboto:wght@400;500&display=swap"
         rel="stylesheet"
       />
-
-      <link rel="preconnect" href="https://fonts.googleapis.com"/>
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-      <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@700&display=swap" rel="stylesheet" />
     </Head>
   );
 };

@@ -3,9 +3,9 @@ const HelloSection = () => {
     <section className="hello block">
       <div className="container">
         <div className="grid grid--1x2">
-          <h2 className="name-heading">محمد{<br />}عبدالمُنعم</h2>
+          <h2>hello everyone</h2>
           <p>
-            I'm Mohamed Abdelmoniem, and I'm passionate about learning new
+            I&apos;m Mohamed Abdelmoniem, and I&apos;m passionate about learning new
             things. 
             
             {<br /> }
@@ -14,8 +14,9 @@ const HelloSection = () => {
             create websites. My journey was filled with moments of frustration
             and excitement, but by 2019, I had embarked on a rewarding career as
             a MEAN stack developer. 
-            {<br /> }
-            Today, I'm proud to be a frontend developer,
+            {<br />}
+            
+            Today, I&apos;m proud to be a frontend developer,
             continuing to explore the ever-evolving world of web technology.
             {<br /> }
             {<br /> }
