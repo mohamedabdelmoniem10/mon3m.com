@@ -786,9 +786,18 @@ textarea::placeholder {
 
 .footer__contact,
 .footer__contact a,
-.social__links,
+/* .social__links, */
 .footer__social {
   margin: 0 2rem;
+}
+
+.footer__contact {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer__contact a.link {
+  white-space: nowrap;
 }
 
 .social__links a {
@@ -797,10 +806,10 @@ textarea::placeholder {
 
 .social__links {
   position: relative;
-  margin-left: 12rem;
+  /* margin-left: 12rem; */
 }
 
-.social__links::after {
+/* .social__links::after {
   content: "";
   width: 6rem;
   height: 1px;
@@ -809,8 +818,7 @@ textarea::placeholder {
   left: -9rem;
   top: 50%;
   transform: translateY(-50%);
-
-}
+} */
 
 @media screen and (max-width: 1024px) {
   .footer__contact {

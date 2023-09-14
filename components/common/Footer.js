@@ -12,7 +12,7 @@ const Footer = () => {
 
         <div className="footer__social">
           <div className="footer__social-media">
-            <p>Social</p>
+            {/* <p>Social</p> */}
             <div className="social__links">
               <a href="https://twitter.com/Mohamed_Mon3m" className="link">
                 <svg className="icon">
