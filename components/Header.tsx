@@ -12,9 +12,21 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-rule/70 bg-mist/85 backdrop-blur-md">
       <div className="wrap flex h-16 items-center justify-between gap-4">
-        <Link href="/" className="group flex items-baseline gap-2" aria-label={`${site.name}, home`}>
-          <span className="font-display text-lg font-semibold tracking-tight">Mohamed Abdelmoniem</span>
-          <span className="ar hidden text-sm text-muted sm:inline" lang="ar" dir="rtl">
+        <Link href="/" className="group flex items-center gap-2.5" aria-label={`${site.name}, home`}>
+          <span
+            aria-hidden="true"
+            className="block h-6 w-[1.9rem] bg-ink transition-colors group-hover:bg-pine"
+            style={{
+              maskImage: "url(/images/logo-mo.png)",
+              WebkitMaskImage: "url(/images/logo-mo.png)",
+              maskSize: "contain",
+              WebkitMaskSize: "contain",
+              maskRepeat: "no-repeat",
+              WebkitMaskRepeat: "no-repeat",
+            }}
+          />
+          <span className="hidden font-display text-lg font-semibold tracking-tight min-[420px]:inline">Mohamed Abdelmoniem</span>
+          <span className="ar hidden text-sm text-muted md:inline" lang="ar" dir="rtl">
             {site.nameAr}
           </span>
         </Link>
@@ -31,6 +43,15 @@ export function Header() {
               </li>
             ))}
           </ul>
+          <a
+            href={site.oldVersion}
+            target="_blank"
+            rel="noopener"
+            title="See the 2023 version of this site"
+            className="hidden rounded-full px-3 py-1.5 font-mono text-xs text-muted transition-colors hover:bg-paper hover:text-ink lg:inline"
+          >
+            v1 (2023) ↗
+          </a>
           <a
             href={site.cv}
             className="rounded-full bg-pine px-3.5 py-1.5 text-sm font-medium text-pine-ink transition-opacity hover:opacity-90"

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Hero } from "@/components/Hero";
+import { ContactForm } from "@/components/ContactForm";
 import { ProjectCard } from "@/components/ProjectCard";
 import { groups, projects, type ProjectGroup } from "@/lib/projects";
 import { alongside, capabilities, experience } from "@/lib/experience";
@@ -155,28 +156,40 @@ export default function Home() {
       </section>
 
       <section id="contact" aria-labelledby="contact-title" className="scroll-mt-20 bg-pine text-pine-ink">
-        <div className="wrap grid gap-10 py-20 sm:py-28 lg:grid-cols-[1.4fr_1fr] lg:items-end">
+        <div className="wrap grid gap-12 py-20 sm:py-28 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
           <div>
             <p className="font-mono text-xs uppercase tracking-wider opacity-70">Contact</p>
-            <h2 id="contact-title" className="display mt-3 text-5xl font-semibold sm:text-7xl">
+            <h2 id="contact-title" className="display mt-3 text-5xl font-semibold sm:text-6xl">
               Building something that has to work in two languages?
             </h2>
             <p className="mt-6 max-w-xl text-lg opacity-85">
-              I&apos;m looking for a senior frontend or team lead role, remote or in Saudi Arabia or the UAE.
+              I&apos;m looking for a senior frontend or team lead role, remote or in Saudi Arabia or the UAE. Send a message here, or reach me directly.
             </p>
+            <ul className="mt-8 space-y-3">
+              <li>
+                <a href={`mailto:${site.email}`} className="text-lg font-medium underline decoration-pine-ink/40 underline-offset-4 hover:decoration-pine-ink">
+                  {site.email}
+                </a>
+              </li>
+              <li className="flex flex-wrap gap-2 pt-1">
+                {[
+                  ["LinkedIn", site.linkedin],
+                  [`Telegram ${site.telegramHandle}`, site.telegram],
+                  ["CV (PDF)", site.cv],
+                ].map(([label, href]) => (
+                  <a
+                    key={href}
+                    href={href}
+                    rel="noopener"
+                    className="rounded-full border border-pine-ink/30 px-4 py-2 text-sm transition-colors hover:bg-pine-ink hover:text-pine"
+                  >
+                    {label}
+                  </a>
+                ))}
+              </li>
+            </ul>
           </div>
-          <ul className="space-y-3 text-lg">
-            <li>
-              <a href={`mailto:${site.email}`} className="block rounded-xl border border-current/25 px-5 py-4 font-medium transition-colors hover:bg-pine-ink hover:text-pine">
-                {site.email}
-              </a>
-            </li>
-            <li className="grid grid-cols-3 gap-3 text-base">
-              <a href={site.linkedin} rel="me noopener" className="rounded-xl border border-current/25 px-4 py-3 text-center transition-colors hover:bg-pine-ink hover:text-pine">LinkedIn</a>
-              <a href={site.whatsapp} rel="noopener" className="rounded-xl border border-current/25 px-4 py-3 text-center transition-colors hover:bg-pine-ink hover:text-pine">WhatsApp</a>
-              <a href={site.cv} className="rounded-xl border border-current/25 px-4 py-3 text-center transition-colors hover:bg-pine-ink hover:text-pine">CV</a>
-            </li>
-          </ul>
+          <ContactForm />
         </div>
       </section>
     </>

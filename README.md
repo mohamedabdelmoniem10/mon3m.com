@@ -13,6 +13,18 @@ npm run typecheck
 
 Node 20.9+ is required (Vercel: set Node.js to 20.x or 22.x in Project → Settings → Build).
 
+## Contact form
+
+`app/api/contact/route.ts` sends messages through Gmail SMTP. Credentials are read from environment variables only, so nothing secret is in the repo:
+
+| Variable | Value |
+| --- | --- |
+| `SMTP_USER` | the Gmail address that sends |
+| `SMTP_PASS` | a Gmail **app password** (Google Account → Security → 2-Step Verification → App passwords) |
+| `CONTACT_TO` | optional; where messages arrive (defaults to the email in `lib/site.ts`) |
+
+Locally, put them in `.env.local` (git-ignored; see `.env.example`). On Vercel, add them under Project → Settings → Environment Variables, then redeploy. Without them, the form tells visitors to email directly.
+
 ## Where things live
 
 | What | Where |

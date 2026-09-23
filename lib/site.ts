@@ -8,7 +8,10 @@ export const site = {
   timezone: "UTC+3",
   email: "mohamedabdelmoniem10@gmail.com",
   phone: "+201111798451",
-  whatsapp: "https://wa.me/201111798451",
+  telegram: "https://t.me/mohamed_MOniem",
+  telegramHandle: "@mohamed_MOniem",
+  /** The v1 site (2023), pinned to its own deployment so it survives new releases. */
+  oldVersion: "https://mon3m-3hc0r0mtr-mohamedabdelmoniem10.vercel.app/",
   linkedin: "https://www.linkedin.com/in/mon3m",
   github: "https://github.com/mohamedabdelmoniem10",
   cv: "/Mohamed-Abdelmoniem-CV.pdf",

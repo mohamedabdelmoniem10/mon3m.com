@@ -40,6 +40,14 @@ export function Hero() {
             </span>
             <span aria-hidden="true">/</span>
             <span>{site.role}</span>
+            <a
+              href={site.oldVersion}
+              target="_blank"
+              rel="noopener"
+              className="ms-auto normal-case tracking-normal text-muted underline decoration-rule underline-offset-4 hover:text-ink hover:decoration-ink"
+            >
+              See the 2023 version ↗
+            </a>
           </p>
 
           <div
@@ -98,10 +106,10 @@ export function Hero() {
         <aside className="self-end" style={{ ["--d" as string]: "240ms" }} aria-label="At a glance">
           <div className="flex overflow-hidden rounded-2xl border border-rule bg-paper lg:block">
             <Image
-              src="/images/mohamed-abdelmoniem.webp"
+              src="/images/mohamed-abdelmoniem-portrait.webp"
               alt="Mohamed Abdelmoniem"
-              width={720}
-              height={1080}
+              width={800}
+              height={1000}
               priority
               sizes="(min-width: 1024px) 20rem, (min-width: 640px) 14rem, 40vw"
               className="aspect-[4/5] w-[40%] shrink-0 object-cover object-top sm:w-56 lg:w-full"

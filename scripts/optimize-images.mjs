@@ -16,6 +16,8 @@ const map = {
   taskeen: ["taskeen"],
   "bunyan-makkah": ["bunyan-makkah"],
   jozour: ["jozour"],
+  "bonyan-erp": ["bonyan-erp", "bonyan-erp-analytics"],
+  "bunyan-crm": ["bunyan-crm", "bunyan-crm-recovery"],
 };
 
 for (const [slug, shots] of Object.entries(map)) {

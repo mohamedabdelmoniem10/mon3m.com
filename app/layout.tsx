@@ -79,7 +79,7 @@ const personLd = {
   alternateName: [site.nameAr, "Mohamed Moniem", "Mon3m"],
   jobTitle: site.role,
   url: site.url,
-  image: `${site.url}/images/mohamed-abdelmoniem.webp`,
+  image: `${site.url}/images/mohamed-abdelmoniem-portrait.webp`,
   email: `mailto:${site.email}`,
   address: { "@type": "PostalAddress", addressLocality: "Cairo", addressCountry: "EG" },
   sameAs: [site.linkedin, site.github],

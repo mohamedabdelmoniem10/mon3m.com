@@ -11,7 +11,9 @@ export function Footer() {
           <li><a className="hover:text-ink" href={`mailto:${site.email}`}>Email</a></li>
           <li><a className="hover:text-ink" href={site.linkedin} rel="me noopener">LinkedIn</a></li>
           <li><a className="hover:text-ink" href={site.github} rel="me noopener">GitHub</a></li>
+          <li><a className="hover:text-ink" href={site.telegram} rel="noopener">Telegram</a></li>
           <li><a className="hover:text-ink" href={site.cv}>CV (PDF)</a></li>
+          <li><a className="hover:text-ink" href={site.oldVersion} rel="noopener">Old version (2023)</a></li>
         </ul>
       </div>
     </footer>

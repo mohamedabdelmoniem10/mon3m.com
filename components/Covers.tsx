@@ -10,8 +10,6 @@ export function Cover({ kind }: { kind: CoverKind }) {
       <div className="aspect-[16/10] w-full">
         {kind === "themes" && <Themes />}
         {kind === "screener" && <Screener />}
-        {kind === "erp" && <Erp />}
-        {kind === "crm" && <Crm />}
         {kind === "commerce" && <Commerce />}
       </div>
     </div>
@@ -106,95 +104,6 @@ function Screener() {
             </div>
           ))}
         </div>
-      </div>
-    </div>
-  );
-}
-
-function Erp() {
-  const rows = [
-    ["Down payment", "Paid"],
-    ["Installment 1", "Paid"],
-    ["Installment 2", "Paid"],
-    ["Installment 3", "Due"],
-    ["Installment 4", "Upcoming"],
-  ];
-  const dates = ["Jan 2026", "Apr 2026", "Jul 2026", "Oct 2026", "Jan 2027"];
-  const tone: Record<string, string> = {
-    Paid: "bg-sage text-pine",
-    Due: "bg-ink text-mist",
-    Upcoming: "bg-rule text-ink-2",
-  };
-  return (
-    <div className="flex h-full flex-col p-4 sm:p-6">
-      <div className="flex items-end justify-between gap-3">
-        <div>
-          <span className="font-mono text-[0.6rem] text-muted sm:text-xs">Contract · Unit B-12</span>
-          <p className="text-sm font-semibold text-ink sm:text-lg">Installment plan</p>
-        </div>
-        <div className="w-2/5">
-          <div className="flex justify-between font-mono text-[0.55rem] text-muted sm:text-[0.65rem]">
-            <span>Collected</span>
-            <span>3 of 5</span>
-          </div>
-          <div className="mt-1 h-1.5 rounded-full bg-rule sm:h-2">
-            <div className="h-full w-3/5 rounded-full bg-pine" />
-          </div>
-        </div>
-      </div>
-      <ul className="mt-3 flex-1 divide-y divide-rule rounded-lg border border-rule bg-mist sm:mt-4">
-        {rows.map(([label, status], i) => (
-          <li key={label} className={`items-center justify-between px-3 py-1 text-[0.62rem] sm:py-2 sm:text-xs ${i === 4 ? "hidden sm:flex" : "flex"}`}>
-            <span className="text-ink-2">{label}</span>
-            <span className="hidden font-mono text-muted sm:inline">{dates[i]}</span>
-            <span className={`rounded-full px-2 py-0.5 font-mono text-[0.55rem] sm:text-[0.62rem] ${tone[status]}`}>
-              {status}
-            </span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function Crm() {
-  const fields = [
-    ["Area", "Nasr City"],
-    ["Rooms", "3"],
-    ["Intent", "Buy"],
-    ["Channel", "WhatsApp"],
-  ];
-  return (
-    <div className="grid h-full grid-cols-[1fr_auto_1fr] items-center gap-2 p-4 sm:gap-4 sm:p-6">
-      <div className="space-y-2" dir="rtl" lang="ar">
-        <div className="ar max-w-[95%] rounded-2xl rounded-tr-sm bg-mist px-3 py-2 text-[0.62rem] text-ink sm:text-sm">
-          السلام عليكم، عايز شقة ٣ غرف في مدينة نصر للتمليك
-        </div>
-        <div className="ar max-w-[70%] rounded-2xl rounded-tr-sm bg-mist px-3 py-2 text-[0.62rem] text-ink sm:text-sm">
-          ممكن تفاصيل الأسعار؟
-        </div>
-        <div className="ar me-auto max-w-[80%] rounded-2xl rounded-tl-sm bg-pine px-3 py-2 text-[0.62rem] text-pine-ink sm:text-sm">
-          أكيد! عندنا ٤ وحدات مناسبة، أبعتلك التفاصيل؟
-        </div>
-      </div>
-      <svg viewBox="0 0 24 24" className="size-5 text-muted sm:size-7">
-        <path d="M4 12h14m-5-5 5 5-5 5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-      </svg>
-      <div className="rounded-lg border border-rule bg-mist p-3 sm:p-4">
-        <div className="flex items-center justify-between">
-          <span className="font-mono text-[0.6rem] text-muted sm:text-xs">New lead</span>
-          <span className="rounded-full bg-sage px-2 py-0.5 font-mono text-[0.55rem] text-pine sm:text-[0.65rem]">
-            4 matches
-          </span>
-        </div>
-        <dl className="mt-2 space-y-1 sm:mt-3 sm:space-y-1.5">
-          {fields.map(([k, v]) => (
-            <div key={k} className="flex justify-between text-[0.62rem] sm:text-xs">
-              <dt className="text-muted">{k}</dt>
-              <dd className="font-medium text-ink">{v}</dd>
-            </div>
-          ))}
-        </dl>
       </div>
     </div>
   );

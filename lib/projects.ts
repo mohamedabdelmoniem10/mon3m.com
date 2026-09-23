@@ -1,6 +1,6 @@
 export type ProjectGroup = "design-systems" | "products" | "teams";
 
-export type CoverKind = "themes" | "screener" | "erp" | "crm" | "commerce";
+export type CoverKind = "themes" | "screener" | "commerce";
 
 export type Shot = { desktop: string; mobile: string; caption: string; /** Address shown in the browser frame. */ host?: string };
 
@@ -184,9 +184,22 @@ export const projects: Project[] = [
     role: "Architect & lead engineer",
     org: "Bunyan Makkah",
     period: "2025 – 2026",
-    status: "In progress",
+    status: "Live",
     stack: ["NestJS", "DDD", "Prisma", "PostgreSQL", "React", "Vite", "shadcn/ui", "TanStack Query", "i18next", "Turborepo"],
-    cover: "erp",
+    shots: [
+      {
+        desktop: "/work/bonyan-erp/desktop.webp",
+        mobile: "/work/bonyan-erp/mobile.webp",
+        caption: "The home dashboard: units, customers, contracts, payments and reminders at a glance, fully RTL.",
+        host: "bunyan-makkah.com/dashboard",
+      },
+      {
+        desktop: "/work/bonyan-erp/desktop-2.webp",
+        mobile: "/work/bonyan-erp/mobile-2.webp",
+        caption: "Analytics: revenue against expenses, profit and collection rate over time.",
+        host: "bunyan-makkah.com/dashboard",
+      },
+    ],
     context: [
       "Egyptian real estate developers track projects, buyers and installment plans across spreadsheets. Bonyan puts the whole lifecycle in one system, from feasibility to handover.",
     ],
@@ -197,7 +210,7 @@ export const projects: Project[] = [
       "A bilingual Arabic/English React frontend on a shared shadcn/ui design package.",
     ],
     outcomes: ["Running with a pilot client."],
-    note: "Private product. The cover is an illustration, not a screenshot.",
+    note: "Screens from the live system, which sits behind a login.",
   },
   {
     slug: "bunyan-crm",
@@ -208,9 +221,22 @@ export const projects: Project[] = [
     role: "Co-builder (with Islam Awad)",
     org: "Bunyan Makkah",
     period: "2026",
-    status: "In progress",
+    status: "Live",
     stack: ["NestJS", "BullMQ", "Redis", "PostgreSQL", "Prisma", "React", "WhatsApp Cloud API", "Meta Graph API", "LLMs"],
-    cover: "crm",
+    shots: [
+      {
+        desktop: "/work/bunyan-crm/desktop.webp",
+        mobile: "/work/bunyan-crm/mobile.webp",
+        caption: "The overview: lead temperature, today's tasks, deals and commissions, and demand clusters by area and budget.",
+        host: "crm.bunyan-makkah.com",
+      },
+      {
+        desktop: "/work/bunyan-crm/desktop-2.webp",
+        mobile: "/work/bunyan-crm/mobile-2.webp",
+        caption: "Revenue recovery: leads that went quiet and came back, and what happened after, compared period over period.",
+        host: "crm.bunyan-makkah.com",
+      },
+    ],
     context: [
       "Real estate leads arrive as WhatsApp messages and Facebook comments at all hours, and most go cold before an agent replies.",
     ],
@@ -220,7 +246,8 @@ export const projects: Project[] = [
       "A pluggable LLM provider layer, so the model can be swapped without touching the workflow.",
       "Property matching that notifies an agent when a new listing fits a stored lead.",
     ],
-    note: "Co-built. The cover is an illustration of the lead flow, not real customer data.",
+    outcomes: ["In daily use at Bunyan Makkah, with 1,300+ leads captured from WhatsApp and Facebook."],
+    note: "Co-built. Screens are from the live system; customer phone numbers are masked.",
   },
   {
     slug: "bunyan-makkah",
