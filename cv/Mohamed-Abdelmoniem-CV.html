@@ -1,0 +1,193 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Mohamed Abdelmoniem CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+  :root{
+    --paper:#ffffff; --ink:#1b1f29; --body:#3f4452; --muted:#6f7482;
+    --rule:#dcdfe6; --accent:#0d6b6b; --accent-soft:#e6f1f0; --chip:#f2f4f7;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#15181e; --ink:#eef0f4; --body:#c3c7d1; --muted:#8b909d;
+      --rule:#2c313b; --accent:#5fc2bd; --accent-soft:#183635; --chip:#1f2430;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#15181e; --ink:#eef0f4; --body:#c3c7d1; --muted:#8b909d;
+    --rule:#2c313b; --accent:#5fc2bd; --accent-soft:#183635; --chip:#1f2430;
+  }
+  *{box-sizing:border-box;font-kerning:none;font-feature-settings:"kern" 0,"liga" 0,"calt" 0}
+  body{background:var(--paper);color:var(--body);font-family:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:10.6pt;line-height:1.42;margin:0}
+  .page{max-width:190mm;margin:0 auto;padding:16mm 12mm 18mm}
+  a{color:inherit;text-decoration:none}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+  header{border-bottom:2px solid var(--ink);padding-bottom:9pt;margin-bottom:12pt}
+  h1{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:26pt;line-height:1;color:var(--ink);margin:0 0 5pt}
+  .role{font-size:11.5pt;font-weight:600;color:var(--accent);margin:0 0 6pt;}
+  .contact{display:flex;flex-wrap:wrap;gap:4pt 0;font-size:9.6pt;color:var(--muted);margin:0;padding:0;list-style:none}
+  .contact li+li::before{content:"·";margin:0 7pt;color:var(--rule)}
+
+  section{margin-bottom:12pt}
+  h2{font-size:8.6pt;font-weight:600;text-transform:uppercase;color:var(--accent);margin:0 0 6pt;padding-bottom:3pt;border-bottom:1px solid var(--rule)}
+  p{margin:0}
+  .summary{color:var(--body)}
+  .summary strong{color:var(--ink);font-weight:600}
+
+  .job{margin-bottom:9pt;break-inside:avoid}
+  .job-head{display:block}
+  .job-title{font-family:"Newsreader",Georgia,serif;font-size:12.5pt;font-weight:600;color:var(--ink);line-height:1.15}
+  .job-title span{font-weight:500;color:var(--body)}
+  .dates{font-size:9.4pt;color:var(--accent);font-weight:600;font-variant-numeric:tabular-nums;margin:1pt 0 3pt}
+  .job-meta{font-size:9.4pt;color:var(--muted);margin:1pt 0 3pt}
+  ul.bullets{margin:0;padding-left:11pt}
+  ul.bullets li{margin:0 0 2.2pt;padding-left:2pt}
+  ul.bullets li::marker{color:var(--accent)}
+  .bullets strong{color:var(--ink);font-weight:600}
+
+  .skills{display:flex;flex-direction:column;gap:2pt}
+  .skill strong{color:var(--ink);font-weight:600}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:12pt}
+
+  @page{size:A4;margin:11mm 0 11mm}
+  @media print{
+    :root{--paper:#fff;--ink:#1b1f29;--body:#3f4452;--muted:#6f7482;--rule:#dcdfe6;--accent:#0d6b6b;--accent-soft:#e6f1f0;--chip:#f2f4f7}
+    body{font-size:9.6pt;line-height:1.36;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+    h1,.job-title{font-family:Georgia,"Times New Roman",serif}
+    .page{max-width:none;padding:1mm 13mm 0}
+    section{margin-bottom:9pt}
+    .job{margin-bottom:7pt}
+    ul.bullets li{margin-bottom:1.4pt}
+    section{break-inside:auto}
+    h2{break-after:avoid}
+  }
+  @media (max-width:640px){
+        .two{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+<header>
+  <h1>Mohamed Abdelmoniem</h1>
+  <p class="role">Senior Frontend Engineer · Frontend Team Lead</p>
+  <ul class="contact">
+    <li>Cairo, Egypt</li>
+    <li><a href="tel:+201111798451">+20 1111 798 451</a></li>
+    <li><a href="mailto:mohamedabdelmoniem10@gmail.com">mohamedabdelmoniem10@gmail.com</a></li>
+    <li><a href="https://mon3m.vercel.app">mon3m.vercel.app</a></li>
+    <li><a href="https://linkedin.com/in/mon3m">linkedin.com/in/mon3m</a></li>
+    <li><a href="https://github.com/mohamedabdelmoniem10">github.com/mohamedabdelmoniem10</a></li>
+  </ul>
+</header>
+
+<section>
+  <h2>Summary</h2>
+  <p class="summary">Frontend engineer and team lead with <strong>7 years</strong> shipping production web apps for government, banking, fintech, and e-commerce in Egypt and Saudi Arabia. Design-systems specialist: core engineer on the <strong>Saudi National Design System (DGA)</strong> and the <strong>Al Rajhi Group design system</strong> — Stencil.js component libraries with React and Angular output targets and token pipelines, consumed across national-scale government and banking platforms. Comfortable across the stack (Node.js/NestJS, PostgreSQL, Docker, Kubernetes, CI/CD): I own products end to end as a technical partner, and lead backend and DevOps engineers with credibility. Daily AI-assisted engineering (Claude Code, Cursor, custom agents and MCP tooling) to ship faster without lowering the bar. Arabic/English bilingual with deep RTL and localization experience.</p>
+</section>
+
+<section>
+  <h2>Experience</h2>
+
+  <div class="job">
+    <div class="job-head">
+      <div class="job-title">Senior Frontend Engineer <span>· AZM X</span></div>
+      <div class="dates">Dec 2025 – Sep 2026 · Riyadh, Saudi Arabia (Remote)</div>
+    </div>
+        <ul class="bullets">
+      <li>Core engineer on the <strong>Al Rajhi Group design system (ARG GDS)</strong> — 160+ Stencil.js web components with React and Angular output targets, and a style-dictionary token pipeline theming six brands (Al Rajhi Bank, Al Rajhi Capital, Emkan, Neoleap, Takaful, urpay).</li>
+      <li>Returned to the <strong>Saudi National Design System (DGA)</strong>: shipped component updates across the 147-component Stencil library and its Storybook, plus the React documentation site (AR/EN, RTL).</li>
+      <li>Built the <strong>Screening module</strong> for <strong>Colab</strong>, a multi-tenant user-research platform (Next.js 16): screener form builder, participant screening flow via unique links, shortlisting with scheduling status, and the Session Calendar — pixel-matched to Figma, with Storybook 9 a11y and visual-regression tests.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <div class="job-title">Team Lead · Senior Frontend Engineer <span>· ProBuy</span></div>
+      <div class="dates">Oct 2024 – Nov 2025</div>
+    </div>
+    <ul class="bullets">
+      <li>Promoted after six months to lead the full development team (frontend, backend, QA, DevOps) of a Riyadh fintech platform, owning technical direction and cross-discipline delivery.</li>
+      <li>Architected and shipped the admin portal — advanced configuration, analytics, and role-based access control, fully integrated with backend APIs.</li>
+      <li>Built a reusable <strong>checkout-workflow npm package</strong>, cutting integration time across projects by ~60%.</li>
+      <li>Developed the Next.js marketing site with SSR and SEO optimization.</li>
+      <li>Deployed and maintained environments on Azure and Alibaba Cloud (Kubernetes) with Docker and CI/CD pipelines.</li>
+      <li>Authored the integration documentation portal with live examples and API references, cutting partner support requests by over 40%.</li>
+      <li>Raised code quality and release stability through mentoring, code review, and agile practices.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <div class="job-title">Senior Frontend Engineer <span>· AZM X</span></div>
+      <div class="dates">Nov 2023 – Sep 2024 · Riyadh, Saudi Arabia (Remote)</div>
+    </div>
+        <ul class="bullets">
+      <li>Built the <strong>Saudi National Design System (DGA)</strong> with the core team — a large-scale component library standardizing UI/UX across Saudi government platforms.</li>
+      <li>Introduced Stencil.js for framework-agnostic web components with React output targets, giving consumer teams a single source of truth.</li>
+      <li>Led technical implementation of the component library; delivered three weeks ahead of schedule.</li>
+      <li>Integrated Storybook (70+ stories) for visual documentation, accelerating QA and design review cycles.</li>
+      <li>Built the documentation site — usage, code, and style-spec pages for 98 components, bilingual AR/EN with RTL — cutting developer onboarding from two weeks to three days.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <div class="job-title">Senior Frontend Engineer <span>· Dafater</span></div>
+      <div class="dates">Aug 2021 – Oct 2023</div>
+    </div>
+    <ul class="bullets">
+      <li>Led frontend development for three large-scale enterprise applications in Vue 3, from requirements through deployment.</li>
+      <li>Integrated the <strong>Payfort payment gateway</strong> with robust error handling, real-time status updates, and secure transaction logging.</li>
+      <li>Built enterprise authentication on <strong>Azure AD B2C</strong> — SSO, MFA, and role-based access control.</li>
+      <li>Designed a responsive HTML email system rendering pixel-perfect across 15+ clients.</li>
+      <li>Partnered with backend and product teams on API design and data flow.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <div class="job-title">Frontend Developer <span>· EG Coder</span></div>
+      <div class="dates">Aug 2019 – Jun 2021</div>
+    </div>
+    <ul class="bullets">
+      <li>Built and launched WordPress sites with responsive designs and custom PHP.</li>
+      <li>Developed an Angular application for coworking-space management.</li>
+      <li>Integrated the Hyperpay payment gateway into a React Native app.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <div class="job-title">Technical Partner &amp; Product Engineer <span>· independent, alongside full-time roles</span></div>
+      <div class="dates">Jun 2021 – Present · case studies at mon3m.vercel.app</div>
+    </div>
+    <ul class="bullets">
+      <li><strong>Dar Ahlullah Quran Academy</strong> (dar-ahlullah.com) — technical partner; built and own the full LMS: Zoom-integrated live sessions, teacher scheduling, homework, progress and evaluation tracking, session reports, bilingual AR/EN. TurboRepo + pnpm monorepo (Astro, React/Vite, NestJS/Prisma/PostgreSQL) with GitHub Actions, Docker and NGINX across dev/staging/prod. Own SEO and analytics; leading the V2 rebuild.</li>
+      <li><strong>Bunyan Makkah</strong> (real estate, Cairo) — built <strong>Taskeen</strong> (taskeen.bunyan-makkah.com), a Next.js 16 + Prisma housing platform with marketing site, resident portal and RBAC admin, self-hosted on Docker + Caddy; architected <strong>Bonyan ERP</strong>, a multi-tenant NestJS (DDD, schema-per-tenant) + React ERP for developers, in pilot; co-building <strong>Bunyan CRM</strong>, an AI-assisted lead CRM on NestJS, BullMQ/Redis and the WhatsApp Cloud API.</li>
+      <li><strong>MyEx</strong> (my-ex.app) — core contributor on the Next.js 15 / React 19 web app with 21-locale i18n and Storybook; built the Academy module including its .NET backend; own SEO and GTM conversion tracking.</li>
+      <li><strong>Hugaira</strong> — solo-built e-commerce TurboRepo monorepo: Next.js storefront, React admin, NestJS/Prisma API, Expo mobile app, Paymob checkout, Playwright E2E; plus <strong>EStore Factory</strong>, an Electron app that generates branded stores from it as Docker images.</li>
+      <li>Earlier client work: <strong>GoldenBlood</strong> (React, German healthcare client, 95+ PageSpeed), <strong>Bluepages</strong> (Next.js directory), 20+ React Native screens for apps rated 4.5+. Founder of <strong>Jozour</strong> (jozour.store), a perfume brand with its own online store.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <div class="skills">
+    <p class="skill"><strong>Frontend:</strong> React, Next.js, Vue 3, Angular, Stencil.js, React Native, TypeScript, JavaScript, Tailwind, SCSS</p>
+    <p class="skill"><strong>Design Systems:</strong> Component library architecture, Design tokens (style-dictionary), Storybook, Multi-brand theming, i18next, RTL &amp; bilingual AR/EN</p>
+    <p class="skill"><strong>Backend:</strong> Node.js, NestJS, Express, Prisma, PostgreSQL, MongoDB, REST APIs</p>
+    <p class="skill"><strong>Architecture &amp; Tooling:</strong> TurboRepo + pnpm monorepos, DDD, Docker, GitHub Actions CI/CD, Playwright, Azure, Alibaba Cloud (K8s), NGINX</p>
+    <p class="skill"><strong>AI-Assisted Engineering:</strong> Claude Code, Cursor, agentic workflows (custom agents, skills, MCP servers), AI-driven code review, test generation, and documentation</p>
+    <p class="skill"><strong>Leadership:</strong> Team leadership, Code review, Mentoring, Agile delivery, Technical planning</p>
+  </div>
+</section>
+
+<section>
+  <h2>Languages</h2>
+  <p>Arabic (native) · English (fluent)</p>
+</section>
+</div>
+</body></html>
