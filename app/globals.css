@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+/* Palette: pine on cool mist. Light is the default, dark follows the system unless the visitor picks one. */
+:root {
+  --mist: #eef0ea;
+  --paper: #f8f9f5;
+  --ink: #121a16;
+  --ink-2: #3b4640;
+  --muted: #5b655e;
+  --rule: #d6dbd1;
+  --pine: #1c4a3c;
+  --pine-ink: #f1f6f2;
+  --sage: #cfe3d6;
+  --focus: #1c4a3c;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --mist: #0d1310;
+    --paper: #141c18;
+    --ink: #e6ebe5;
+    --ink-2: #bcc6bf;
+    --muted: #87938b;
+    --rule: #26312b;
+    --pine: #8fd0b1;
+    --pine-ink: #0d1310;
+    --sage: #1d3329;
+    --focus: #8fd0b1;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --mist: #0d1310;
+  --paper: #141c18;
+  --ink: #e6ebe5;
+  --ink-2: #bcc6bf;
+  --muted: #87938b;
+  --rule: #26312b;
+  --pine: #8fd0b1;
+  --pine-ink: #0d1310;
+  --sage: #1d3329;
+  --focus: #8fd0b1;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-mist: var(--mist);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-pine: var(--pine);
+  --color-pine-ink: var(--pine-ink);
+  --color-sage: var(--sage);
+
+  --font-display: var(--font-bricolage), "IBM Plex Sans", system-ui, sans-serif;
+  --font-sans: var(--font-plex), "IBM Plex Sans Arabic", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-arabic: "IBM Plex Sans Arabic", var(--font-plex), system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+html {
+  background: var(--mist);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--mist);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--pine);
+  color: var(--pine-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.display {
+  font-family: var(--font-display);
+  font-variation-settings: "wdth" 100;
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+}
+
+.ar {
+  font-family: var(--font-arabic);
+  letter-spacing: 0;
+  line-height: 1.85;
+}
+[dir="rtl"] .display,
+.display.ar {
+  font-family: var(--font-arabic);
+  letter-spacing: 0;
+  line-height: 1.3;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.wrap {
+  width: 100%;
+  max-width: 76rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+@media (min-width: 640px) {
+  .wrap {
+    padding-inline: 2rem;
+  }
+}
+
+/* Hero direction flip: the headline re-flows RTL instead of fading, so the mirror is visible. */
+.flip-enter {
+  animation: flip-in 520ms cubic-bezier(0.2, 0.7, 0.1, 1) both;
+}
+@keyframes flip-in {
+  from {
+    opacity: 0;
+    transform: translateX(calc(var(--flip-dir, 1) * 2.5rem));
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+.reveal {
+  animation: rise 700ms cubic-bezier(0.2, 0.7, 0.1, 1) both;
+  animation-delay: var(--d, 0ms);
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .flip-enter,
+  .reveal {
+    animation: none;
+  }
+}
+
+.prose-work p + p {
+  margin-top: 1rem;
+}

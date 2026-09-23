@@ -1,34 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# mon3m.com: Mohamed Abdelmoniem's portfolio
 
-## Getting Started
+Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS v4. Fully static: every page is prerendered at build time.
 
-First, run the development server:
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
+npm install
+npm run dev        # http://localhost:3000
+npm run build      # production build
+npm run typecheck
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Node 20.9+ is required (Vercel: set Node.js to 20.x or 22.x in Project → Settings → Build).
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Contact form
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+`app/api/contact/route.ts` sends messages through Gmail SMTP. Credentials are read from environment variables only, so nothing secret is in the repo:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+| Variable | Value |
+| --- | --- |
+| `SMTP_USER` | the Gmail address that sends |
+| `SMTP_PASS` | a Gmail **app password** (Google Account → Security → 2-Step Verification → App passwords) |
+| `CONTACT_TO` | optional; where messages arrive (defaults to the email in `lib/site.ts`) |
 
-## Learn More
+Locally, put them in `.env.local` (git-ignored; see `.env.example`). On Vercel, add them under Project → Settings → Environment Variables, then redeploy. Without them, the form tells visitors to email directly.
 
-To learn more about Next.js, take a look at the following resources:
+## Where things live
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| What | Where |
+| --- | --- |
+| Name, links, SEO description | `lib/site.ts` |
+| Projects and case studies | `lib/projects.ts` |
+| Experience timeline and skills | `lib/experience.ts` |
+| Screenshots | `public/work/<slug>/desktop.webp`, `mobile.webp` (`-2` for a second pair) |
+| Illustrations for internal work | `components/Covers.tsx` |
+| CV | `cv/Mohamed-Abdelmoniem-CV.html` (source) → `public/Mohamed-Abdelmoniem-CV.pdf` |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Add a project
 
-## Deploy on Vercel
+1. Add an entry to `projects` in `lib/projects.ts`. Put it in the right `group`; the first project in each group is shown large.
+2. Screenshots: capture desktop at 1440×900 and mobile at 390×844 (3×), then run
+   `node scripts/optimize-images.mjs <folder>` after adding the slug to the map in that script.
+3. No public screenshot (NDA or internal)? Set `cover` to one of the illustration kinds instead, and add a `note`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The case-study page, sitemap entry, Open Graph image and structured data are generated from that entry automatically.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Update the CV
+
+Edit `cv/Mohamed-Abdelmoniem-CV.html`, open it in Chrome, Print → Save as PDF (A4, margins default, background graphics on), and replace `public/Mohamed-Abdelmoniem-CV.pdf`.
+
+## SEO
+
+- Per-page `metadata`, canonical URLs and Open Graph / Twitter cards
+- Generated OG images (`app/opengraph-image.tsx`, `app/work/[slug]/opengraph-image.tsx`)
+- `sitemap.xml` and `robots.txt` from `app/sitemap.ts` and `app/robots.ts`
+- JSON-LD: `Person` on every page, `CreativeWork` + `BreadcrumbList` on case studies
+- Permanent redirects from the old v1 URLs (`/works/*`, `/blog/*`, `/about`, `/contact`, old CV path)
+
+If you move to a custom domain, change `site.url` in `lib/site.ts`.

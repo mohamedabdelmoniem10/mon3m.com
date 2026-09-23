@@ -1,0 +1,33 @@
+export const site = {
+  url: "https://mon3m.vercel.app",
+  name: "Mohamed Abdelmoniem",
+  nameAr: "محمد عبدالمنعم",
+  shortName: "Mon3m",
+  role: "Senior Frontend Engineer & Team Lead",
+  location: "Cairo, Egypt",
+  timezone: "UTC+3",
+  email: "mohamedabdelmoniem10@gmail.com",
+  phone: "+201111798451",
+  telegram: "https://t.me/mohamed_MOniem",
+  telegramHandle: "@mohamed_MOniem",
+  /** The v1 site (2023), pinned to its own deployment so it survives new releases. */
+  oldVersion: "https://mon3m-3hc0r0mtr-mohamedabdelmoniem10.vercel.app/",
+  linkedin: "https://www.linkedin.com/in/mon3m",
+  github: "https://github.com/mohamedabdelmoniem10",
+  cv: "/Mohamed-Abdelmoniem-CV.pdf",
+  description:
+    "Senior frontend engineer and team lead with 7 years of experience. I build design systems (Saudi National Design System, Al Rajhi Group) and own products end to end with Next.js, React, NestJS and PostgreSQL.",
+  keywords: [
+    "Senior Frontend Engineer",
+    "Frontend Team Lead",
+    "Design Systems Engineer",
+    "Next.js developer",
+    "React developer",
+    "Stencil.js",
+    "Saudi National Design System",
+    "RTL Arabic frontend",
+    "NestJS",
+    "TypeScript",
+    "Remote frontend engineer Egypt",
+  ],
+} as const;
